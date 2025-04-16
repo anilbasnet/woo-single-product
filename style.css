@@ -1,3 +1,11 @@
+:root {
+  --wp--preset--color--background:#fff;
+  --wp--preset--color--foreground:#000;
+  --wp--preset--color--border:#c9c9c9;
+  --wp--preset--color--link-hover:#222;
+  --wp--preset--color--button-backgrond:#222;
+}
+
 /*!
 Theme Name: 
 Theme URI: 
@@ -247,7 +255,7 @@ button:-moz-focusring,
 [type=button]:-moz-focusring,
 [type=reset]:-moz-focusring,
 [type=submit]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+  outline: 1px dotted var(--wp--preset--color--border);
 }
 
 /**
@@ -490,7 +498,7 @@ body {
   color: #000;
   line-height: 1.8em;
   font-weight: 400;
-  background: #fff; /* Fallback for when there is no custom background color defined. */
+  background: var(--wp--preset--color--background); /* Fallback for when there is no custom background color defined. */
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   overflow-x: hidden;
@@ -585,8 +593,8 @@ a:active {
 /* Forms
 --------------------------------------------- */
 input[type=button], input[type=reset], input[type=submit], button {
-  background: #000;
-  color: #fff;
+  background: var(--wp--preset--color--foreground);
+  color: var(--wp--preset--color--background);
   font-size: 14px;
   padding: 9px 35px;
   border: none;
@@ -610,8 +618,8 @@ input[type=button]:active,
 input[type=reset]:active,
 input[type=submit]:active,
 button:active {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--wp--preset--color--foreground);
+  color: var(--wp--preset--color--background);
   outline: none;
 }
 
@@ -633,13 +641,13 @@ input[type=color],
 textarea,
 select {
   color: #272727;
-  border: 1px solid #e7e7e7;
+  border: 1px solid var(--wp--preset--color--border);
   padding: 7px 10px 7px 15px;
   background: #f6f6f6;
 }
 
 select {
-  border: 1px solid #e7e7e7;
+  border: 1px solid var(--wp--preset--color--border);
   width: 100%;
   padding: 10px 25px 10px 10px;
 }
@@ -919,7 +927,6 @@ clear-fix {
 --------------------------------------------------------------*/
 #content {
   padding: 50px 0;
-  background: #fff;
 }
 
 .container {
@@ -995,7 +1002,12 @@ clear-fix {
   display: none;
 }
 .section-carousel-enabled .slick-dots.slick-active span {
-  background-color: #000;
+  background-color: var(--wp--preset--color--foreground);
+}
+
+.slick-slide .single-thumb img {
+  display: block;
+  width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -1106,13 +1118,12 @@ clear-fix {
 #breadcrumb ul li {
   display: inline-block;
   list-style: outside none none;
-  padding-right: 10px;
 }
 #breadcrumb ul li a, #breadcrumb ul li a:visited {
-  color: #000;
+  color: var(--wp--preset--color--foreground);
 }
 #breadcrumb ul li a:hover, #breadcrumb ul li a :focus, #breadcrumb ul li a :active, #breadcrumb ul li a:visited:hover, #breadcrumb ul li a:visited :focus, #breadcrumb ul li a:visited :active {
-  color: #ce1648;
+  color: var(--wp--preset--color--link-hover);
 }
 #breadcrumb ul li.trail-item.trail-end::after {
   display: none;
@@ -1123,7 +1134,7 @@ clear-fix {
 #breadcrumb ul li:before {
   content: "/";
   font-size: 11px;
-  margin-right: 10px;
+  margin: 0 5px;
 }
 
 /*--------------------------------------------------------------
@@ -1149,7 +1160,7 @@ clear-fix {
   position: absolute;
   left: 20px;
   top: 20px;
-  background: #fff;
+  background: var(--wp--preset--color--background);
   border-radius: 100%;
   padding: 5px 4px;
 }
@@ -1157,9 +1168,9 @@ clear-fix {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  background: #fff;
+  background: var(--wp--preset--color--background);
   border-radius: 100%;
-  padding: 4px 10px;
+  padding: 8px 9px;
   height: 34px;
   width: 34px;
 }
@@ -1191,13 +1202,17 @@ clear-fix {
   text-align: right;
 }
 #product-single .summary.entry-summary .product-item-details .item-content {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+}
+#product-single .summary.entry-summary .color-picker h3, #product-single .summary.entry-summary .size-title-wrapper h3 {
+  font-size: 14px;
+  font-weight: 500;
 }
 #product-single .summary.entry-summary .choose-color ul {
   display: flex;
   gap: 20px;
   float: right;
-  width: 100%;
+  flex-direction: row-reverse;
 }
 #product-single .summary.entry-summary .choose-color ul li a {
   text-indent: -5px;
@@ -1206,6 +1221,18 @@ clear-fix {
   height: 25px;
   background: #ddd;
   border-radius: 100%;
+  position: relative;
+}
+#product-single .summary.entry-summary .choose-color ul li a.active:after {
+  content: "";
+  height: 25px;
+  width: 1px;
+  background: var(--wp--preset--color--border);
+  display: block;
+  transform: rotate(45deg);
+  left: 13px;
+  position: absolute;
+  left: 12px;
 }
 #product-single .summary.entry-summary .choose-color ul li.pink-color a {
   background: #fde5fe;
@@ -1226,20 +1253,34 @@ clear-fix {
 }
 #product-single .summary.entry-summary .size-select .size-title-wrapper a, #product-single .summary.entry-summary .size-select .size-title-wrapper a:visited {
   text-decoration: underline;
-  color: rgba(0, 0, 0, 0.3294117647);
+  color: var(--wp--preset--color--foreground) 54;
 }
 #product-single .summary.entry-summary .size-select .size-title-wrapper a:hover, #product-single .summary.entry-summary .size-select .size-title-wrapper a:focus, #product-single .summary.entry-summary .size-select .size-title-wrapper a:active {
-  color: #000;
+  color: var(--wp--preset--color--foreground);
 }
 #product-single .summary.entry-summary .size-select .product-size {
   display: flex;
   margin-bottom: 30px;
 }
-#product-single .summary.entry-summary .size-select .product-size td, #product-single .summary.entry-summary .size-select .product-size th {
+#product-single .summary.entry-summary .size-select .product-size li a {
   padding: 5px;
-  border: 1px solid #ededed;
+  border: 1px solid var(--wp--preset--color--border);
   text-align: center;
   min-width: 50px;
+  display: block;
+  border-right: 0;
+}
+#product-single .summary.entry-summary .size-select .product-size li a:hover, #product-single .summary.entry-summary .size-select .product-size li a:active, #product-single .summary.entry-summary .size-select .product-size li a:focus {
+  border: 1px solid var(--wp--preset--color--foreground);
+}
+#product-single .summary.entry-summary .size-select .product-size li:first-child a {
+  border-right: 1px solid var(--wp--preset--color--border);
+}
+#product-single .summary.entry-summary .size-select .product-size li:first-child a:hover, #product-single .summary.entry-summary .size-select .product-size li:first-child a:active, #product-single .summary.entry-summary .size-select .product-size li:first-child a:focus {
+  border-right: 1px solid var(--wp--preset--color--foreground);
+}
+#product-single .summary.entry-summary .size-select .product-size li.active a {
+  border: 1px solid var(--wp--preset--color--foreground);
 }
 #product-single .summary.entry-summary .product-quantity {
   margin-bottom: 30px;
@@ -1248,6 +1289,9 @@ clear-fix {
   display: flex;
   justify-content: flex-start;
   flex-direction: row-reverse;
+}
+#product-single .summary.entry-summary .product-quantity span.minus {
+  font-size: 27px;
 }
 #product-single .summary.entry-summary .product-quantity span {
   font-size: 20px;
@@ -1277,7 +1321,7 @@ clear-fix {
 #product-single .summary.entry-summary .fix-price {
   font-weight: 700;
   font-size: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 0;
   display: inline-block;
 }
 #product-single .product-title {
@@ -1319,13 +1363,16 @@ Related Product
   left: 20px;
 }
 .related-products .product-thumb .pruduct-buttons a {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.5019607843);
   border-radius: 100%;
   padding: 5px 3px;
   height: 34px;
   width: 34px;
   display: block;
   margin: 0 auto;
+}
+.related-products .product-thumb .pruduct-buttons a img {
+  width: auto;
 }
 .related-products .product-item.slick-slide {
   padding: 0 15px;
@@ -1354,21 +1401,24 @@ Related Product
 .related-products .product-price-container {
   font-size: 16px;
 }
+.related-products .product-price-container del.dis-price {
+  opacity: 0.5;
+  margin-left: 5px;
+}
 
 /* Smaller than standard 1230(devices and browsers) */
 @media only screen and (max-width: 1023px) {
   .container, .related-products .container {
-    max-width: 95%;
+    max-width: 100%;
+    padding: 0 20px;
   }
   #product-single .summary.entry-summary {
     width: 50%;
-    float: left;
     padding-right: 15px;
     padding-left: 15px;
   }
   #product-single .product-thumb-main {
     width: 50%;
-    float: left;
     padding: 0 15px;
     max-width: inherit;
   }
@@ -1385,5 +1435,11 @@ Related Product
   }
   .related-products .section-related-product-carousel .slick-arrow.slick-next {
     right: 0;
+  }
+  #product-single .product-thumb-main .pager-thumbnail-wrapper {
+    display: none;
+  }
+  #product-single .product-thumb-main .main-thumb-slide {
+    width: 100%;
   }
 }

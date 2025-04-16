@@ -258,7 +258,7 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-	outline: 1px dotted ButtonText;
+	outline: 1px dotted var(--wp--preset--color--border);
 }
 
 /**
@@ -505,7 +505,7 @@ body {
 	color: #000;
 	line-height: 1.8em;
 	font-weight: 400;
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	background: var(--wp--preset--color--background); /* Fallback for when there is no custom background color defined. */
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
 	overflow-x: hidden;
@@ -600,8 +600,8 @@ a:active {
 /* Forms
 --------------------------------------------- */
 input[type="button"], input[type="reset"], input[type="submit"], button {
-    background: #000;
-    color: #fff;
+    background: var(--wp--preset--color--foreground);
+    color: var(--wp--preset--color--background);
     font-size: 14px;
     padding: 9px 35px;
     border: none;
@@ -625,8 +625,8 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active,
 button:active {
-	background-color: #000;
-	color: #fff;
+	background-color: var(--wp--preset--color--foreground);
+	color: var(--wp--preset--color--background);
 	outline: none;
 }
 
@@ -648,13 +648,13 @@ input[type="color"],
 textarea,
 select {
     color: #272727;
-    border: 1px solid #e7e7e7;
+    border: 1px solid var(--wp--preset--color--border);
     padding: 7px 10px 7px 15px;
     background: #f6f6f6;
 }
 
 select {
-    border: 1px solid #e7e7e7;
+    border: 1px solid var(--wp--preset--color--border);
     width: 100%;
     padding: 10px 25px 10px 10px;
 }
