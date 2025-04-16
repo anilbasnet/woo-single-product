@@ -1,0 +1,10 @@
+{
+  "name": "matat-single-product",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "sass-watch":"sass --no-source-map --watch sass/main.scss style.css",
+    "sass-build": "sass --no-source-map sass/main.scss style.css --style compressed"
+  }
+}
