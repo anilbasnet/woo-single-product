@@ -870,7 +870,10 @@ clear-fix {
 
 /* Accessibility
 --------------------------------------------- */
-
+button:disabled[disabled] {
+	color: inherit;
+	cursor: not-allowed;
+}
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	border: 0;
@@ -959,3 +962,4 @@ clear-fix {
     margin-bottom: 25px;
     font-size: 24px;
 }
+

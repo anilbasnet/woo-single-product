@@ -44,10 +44,12 @@ jQuery(function ($) {
     focusOnSelect: true,
     arrows: true,
     infinite: true,
+    autoplay: true,
+  autoplaySpeed: 2000,
     prevArrow:
-      '<span data-role="none" class="slick-prev" tabindex="0"></span>',
-    nextArrow:
       '<span data-role="none" class="slick-next" tabindex="0"></span>',
+    nextArrow:
+      '<span data-role="none" class="slick-prev" tabindex="0"></span>',
       rtl: true,
       responsive: [
         {
@@ -59,30 +61,25 @@ jQuery(function ($) {
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 650,
           settings: {
+            arrows: false,
             slidesToShow: 2,
             slidesToScroll: 2
           }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
+        
         }
       ]
   });
 
   $('.faq-list').find('.faq-content').hide();
-  $(document).on('click', '.faq-title', function(){
+  $(document).on('click', '.faq-title', function() {
     $(this).parent().siblings().removeClass('acc_active');
-    $(this).parent().siblings().find('.faq-content').slideUp('slow');
+    $(this).parent().siblings().find('.faq-content').slideUp(200);
     $(this).parent().toggleClass('acc_active');
     $(this).parent().siblings().removeClass('acc_active');
-    $(this).next('.faq-content').slideToggle('slow');
-  })
+    $(this).next('.faq-content').slideToggle(200);
+  });
 
 
   $('.minus').click(function () {

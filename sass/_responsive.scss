@@ -1,77 +1,121 @@
-
 /* Smaller than standard 1230(devices and browsers) */
-@media only screen and (max-width:1023px){
-  .container, .related-products .container {
+@media only screen and (max-width: 1023px) {
+  .container,
+  .related-products .container {
     max-width: 100%;
     padding: 0 20px;
-}
-    #product-single .summary.entry-summary {
+  }
+  #product-single {
+    .summary.entry-summary {
       width: 50%;
       padding-right: 15px;
       padding-left: 15px;
-  }
-  #product-single .product-thumb-main {
-    width: 50%;
-    padding: 0 15px;
-    max-width: inherit;
-  }
-}
-@media only screen and (min-width:768px){
-  .desktop-hide {
-    display: none;
-  }
-  .mobile-hide {
-    display: block;
+    }
+    .product-thumb-main {
+      width: 50%;
+      padding: 0 15px;
+      max-width: inherit;
+    }
   }
 }
-@media only screen and (max-width:768px){
-
-  .mobile-hide {
-    display: none;
+@media only screen and (min-width: 768px) {
+  #page div {
+    .desktop-hide {
+      display: none;
+    }
+    .mobile-hide {
+      display: block;
+    }
   }
-  .desktop-hide {
-    display: block;
+}
+@media only screen and (max-width: 768px) {
+  .product-title-wrapper a.wish-list.desktop-hide {
+    float: left;
   }
-  #product-single .summary.entry-summary .product-title-wrapper {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #C9C9C9;
-    border-radius: 50px 50px 0px 0px;
-    top: -43px;
-    position: relative;
-    z-index: 9;
-    /* max-width: 95%; */
-    margin: 0 auto;
-    padding: 20px;
-}
-#product-single .product-thumb-main a.woocommerce-product-gallery__trigger {
-  bottom: 60px;
-
-}
-.section-carousel-enabled .slick-dots {
-  text-align: center;
-  transition: all 1s ease-in-out 0s;
-  width: 100%;
-  z-index: 999;
-  position: absolute;
-  bottom: 8%;
-  margin: 0;
-}
-   #product-single .summary.entry-summary {
+  #page div {
+    .mobile-hide {
+      display: none;
+    }
+    .desktop-hide {
+      display: block;
+    }
+  }
+  #product-single > .container {
+    padding: 0;
+  }
+  #product-single > .container > .inner-wrapper {
+    margin: 0;
+  }
+  .related-product-carousel-wrapper {
+    overflow: hidden;
+    .slick-slide img {
+      display: block;
       width: 100%;
+    }
+    .inner-wrapper {
+      margin-left: -146px;
+    }
   }
-  #product-single .product-thumb-main {
-    width: 100%;
+
+  #product-single {
+    .single-cart.clear-fix {
+      clear: both;
+    }
+
+    .share-on ul {
+      margin: 30px 0;
+    }
+    .product-thumb-main {
+      width: 100%;
+      a.woocommerce-product-gallery__trigger {
+        bottom: 60px;
+      }
+      .pager-thumbnail-wrapper {
+        display: none;
+      }
+      .main-thumb-slide {
+        width: 100%;
+        padding: 0;
+      }
+    }
+    .summary.entry-summary {
+      width: 100%;
+      padding: 0 30px;
+      button.add_to_cart_button {
+        margin-bottom: 0;
+      }
+      .product-title-wrapper {
+        background: var(--wp--preset--color--background);
+        border: 1px solid var(--wp--preset--color--border);
+        border-radius: 50px 50px 0px 0px;
+        top: -43px;
+        position: relative;
+        z-index: 9;
+        margin: 0 auto;
+        padding:20px 30px;
+        margin-left: -30px;
+        margin-right: -30px;
+      }
+    }
+    .section-carousel-enabled .slick-dots {
+      text-align: center;
+      transition: all 1s ease-in-out 0s;
+      width: 100%;
+      z-index: 999;
+      position: absolute;
+      bottom: 8%;
+      margin: 0;
+    }
   }
-    .related-products .section-related-product-carousel .slick-arrow.slick-prev {
-      left: 0;
+
+  .related-products {
+    .section-related-product-carousel {
+      .slick-arrow.slick-prev {
+        left: 0;
+      }
+      .slick-arrow.slick-next {
+        right: 0;
+      }
+    }
   }
-  .related-products .section-related-product-carousel .slick-arrow.slick-next {
-    right: 0;
-  }
-  #product-single .product-thumb-main .pager-thumbnail-wrapper {
-    display: none;
-  }
-  #product-single .product-thumb-main .main-thumb-slide {
-    width: 100%;
-}
 }
