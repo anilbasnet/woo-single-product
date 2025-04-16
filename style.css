@@ -1005,7 +1005,7 @@ clear-fix {
   background-color: var(--wp--preset--color--foreground);
 }
 
-.slick-slide .single-thumb img {
+.single-thumb img {
   display: block;
   width: 100%;
 }

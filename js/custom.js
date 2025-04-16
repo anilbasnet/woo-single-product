@@ -10,9 +10,8 @@ jQuery(function ($) {
 	  nextArrow: '<span data-role="none" class="slick-next" tabindex="0"></span>',
     rtl: true,
     responsive: [
-     
       {
-        breakpoint: 600,
+        breakpoint: 769,
         settings: {
           dots: true,
           arrows: false,
