@@ -56,12 +56,12 @@ jQuery(function ($) {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
+          arrows: false,
         }
       },
       {
-        breakpoint: 650,
+        breakpoint: 700,
         settings: {
-          arrows: false,
           slidesToShow: 2,
           slidesToScroll: 2
         }
