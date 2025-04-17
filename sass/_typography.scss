@@ -7,10 +7,10 @@ Description:
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
-License: GNU General Public License v2 or later
+License: 
 License URI: LICENSE
 Text Domain: 
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: 
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
@@ -610,24 +610,17 @@ input[type="button"], input[type="reset"], input[type="submit"], button {
     display: inline-block;
     text-transform: uppercase;
     font-weight: 500;
+	&:hover,&:focus,&:active {
+		background-color: var(--wp--preset--color--button-background-hover);
+		color: var(--wp--preset--color--background);
+		outline: none;
+	}
+	&:focus {
+		outline: dotted thin;
+	}
 }
 
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover,
-button:hover,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:focus,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active,
-button:active {
-	background-color: var(--wp--preset--color--foreground);
-	color: var(--wp--preset--color--background);
-	outline: none;
-}
+
 
 input[type="text"],
 input[type="email"],
@@ -650,6 +643,9 @@ select {
     border: 1px solid var(--wp--preset--color--border);
     padding: 7px 10px 7px 15px;
     background: #f6f6f6;
+	&:focus {
+		outline: dotted thin;
+	}
 }
 
 select {
@@ -671,24 +667,7 @@ select {
 	height: auto;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="range"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="time"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="color"]:focus,
-textarea:focus {
-	outline:none;
-}
+
 
 textarea {
 	width: 100%;
@@ -706,7 +685,7 @@ textarea {
 	display: block;
 }
 
-clear-fix {
+.clear-fix {
 	clear: both;
 }
 
@@ -939,7 +918,7 @@ button:disabled[disabled] {
 --------------------------------------------------------------*/
 
 #content {
-    padding: 50px 0;
+    padding: 30px 0;
 }
 .container {
     width: 1100px;
