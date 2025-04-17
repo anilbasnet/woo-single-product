@@ -1058,6 +1058,9 @@ button:disabled[disabled] {
   font-size: 14px;
   font-weight: normal;
 }
+.faq-section .faq-item .faq-title h3 a {
+  display: block;
+}
 .faq-section .faq-item .faq-title:after {
   content: "+";
   height: 40px;

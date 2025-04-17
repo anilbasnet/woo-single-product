@@ -117,6 +117,9 @@
           margin: 0;
           font-size: 14px;
           font-weight: normal;
+          a {
+            display: block;
+          }
         }
         &:after {
           content: "+";
