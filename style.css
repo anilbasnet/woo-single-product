@@ -1103,24 +1103,20 @@ button:disabled[disabled] {
 #breadcrumb ul li span {
   opacity: 0.5;
 }
-#breadcrumb ul li a,
-#breadcrumb ul li a:visited {
+#breadcrumb ul li a {
   color: var(--wp--preset--color--foreground);
 }
 #breadcrumb ul li a:hover,
 #breadcrumb ul li a :focus,
-#breadcrumb ul li a :active,
-#breadcrumb ul li a:visited:hover,
-#breadcrumb ul li a:visited :focus,
-#breadcrumb ul li a:visited :active {
+#breadcrumb ul li a :active {
   color: var(--wp--preset--color--link-hover);
 }
 #breadcrumb ul li a:hover span,
 #breadcrumb ul li a :focus span,
-#breadcrumb ul li a :active span,
-#breadcrumb ul li a:visited:hover span,
-#breadcrumb ul li a:visited :focus span,
-#breadcrumb ul li a:visited :active span {
+#breadcrumb ul li a :active span {
+  opacity: 1;
+}
+#breadcrumb ul li a:focus span {
   opacity: 1;
 }
 #breadcrumb ul li.trail-item.trail-end::after {

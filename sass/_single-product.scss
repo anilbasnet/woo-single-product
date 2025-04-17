@@ -167,8 +167,7 @@
           opacity: 0.5;
         }
   
-        a,
-        a:visited {
+        a {
           color: var(--wp--preset--color--foreground);
           &:hover,
           :focus,
@@ -178,8 +177,13 @@
               opacity: 1;
             }
           }
+          &:focus span {
+            opacity: 1;
         }
-  
+        }
+      
+      
+      
         &.trail-item.trail-end::after {
           display: none;
         }
