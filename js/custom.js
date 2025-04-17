@@ -62,8 +62,10 @@ jQuery(function ($) {
       {
         breakpoint: 700,
         settings: {
+          arrows: false,
           slidesToShow: 2,
           slidesToScroll: 2
+          
         }
       
       }
